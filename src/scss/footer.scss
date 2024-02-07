@@ -1,0 +1,23 @@
+.footer {
+	background-color: #D9D9D9;
+			
+		// .footer__container
+		&__container {
+			padding: 15px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 50px;
+		}
+	// .footer__logo
+	&__logo {
+		flex: 0 0 150px;
+		img {
+			width: 100%;
+		}
+	}
+	span {
+		padding-top: 2px;
+	}
+}
+
