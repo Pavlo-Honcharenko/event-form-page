@@ -12,7 +12,7 @@
 */
 
 // Увімкнути/вимкнути FLS (Full Logging System) (в роботі)
-window['FLS'] = false;
+window['FLS'] = true;
 
 // Підключення основного файлу стилів
 import "../scss/style.scss";
