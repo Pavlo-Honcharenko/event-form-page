@@ -19,5 +19,8 @@
 	span {
 		padding-top: 2px;
 	}
+	@media (max-width:$tablet){
+		padding-bottom: 155px;
+	}
 }
 

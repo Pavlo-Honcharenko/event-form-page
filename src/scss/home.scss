@@ -5,6 +5,15 @@
   'GRAD' 0,
   'opsz' 24
 }
+.material-symbols-outlined.info-icon {
+   transform: scale(0.65);
+}
+span .material-symbols-outlined.info-icon {
+   transform: scale(0.65) translate(0px, 9px);
+}
+.material-symbols-outlined.video-icon {
+   transform: translate(0px, 4px);
+}
 
 .page {
 	padding: 30px;
@@ -267,13 +276,13 @@ a {
 		position: fixed;
 		top: initial;
 		left: 0;
-		bottom: 155px;
+		bottom: 153px;
 		width: 100%;
 		z-index: 900;
 	}
 	@media (max-width:$mobile){
 		// top: calc(100vh - 132px);
-		bottom: 135px;
+		bottom: 133px;
 	}
 }
 .sticky-block {
@@ -407,7 +416,7 @@ a {
 	}
 }
 
-.sub-title .sticky-block__price-info {
+.sub-title .sticky-block__price-info, span .sticky-block__price-info {
 	display: inline-flex;
 }
 
