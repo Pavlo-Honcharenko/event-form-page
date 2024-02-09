@@ -6,13 +6,14 @@
   'opsz' 24
 }
 .material-symbols-outlined.info-icon {
-   transform: scale(0.65);
+   transform: scale(0.65) translate(0px, -1px);
 }
 span .material-symbols-outlined.info-icon {
    transform: scale(0.65) translate(0px, 9px);
+	cursor: pointer;
 }
 .material-symbols-outlined.video-icon {
-   transform: translate(0px, 4px);
+   margin-top: 12px;
 }
 
 .page {
@@ -121,24 +122,29 @@ span .material-symbols-outlined.info-icon {
 	margin-bottom: 15px;
 }
 .info-block {
-	display: flex;
-	gap: 30px;
 
-	@media (max-width:$mobile){
-		gap: 20px; 
+	.info-block__row {
+		display: flex;
+		flex-wrap: wrap;
 	}
 
-	@media (max-width:$mobileSmall){
-		gap: 10px; 
-	}
 		// .info-block__left-col
 		&__left-col {
-
+			flex: 0 0 24px;
 		}
 		// .info-block__right-col
 		&__right-col {
 			padding-top: 2px;
-			flex: 1 1 100%;
+			padding-left: 30px;
+			flex: 0 0 calc(100% - 30px);
+
+			@media (max-width:$mobile){
+				padding-left: 20px; 
+			}
+
+			@media (max-width:$mobileSmall){
+				padding-left: 15px; 
+			}
 		}
 		@include adaptiveValue("margin-bottom", 35, 22);
 		font-size: 14px;
@@ -316,10 +322,10 @@ a {
 	}
 	// .sticky-block__content
 	&__content {
-		// border: 2px solid #1A237E;
-		// box-shadow: inset 0 0 0 2px #1A237E;
-		border: 2px solid #761B7B;
-		box-shadow: inset 0 0 0 2px #761B7B;
+		border: 2px solid #1A237E;
+		box-shadow: inset 0 0 0 2px #1A237E;
+		// border: 2px solid #761B7B;
+		// box-shadow: inset 0 0 0 2px #761B7B;
 		border-radius: 8px;
 		padding: 16px;
 		width: 100%;
@@ -354,7 +360,7 @@ a {
 	// .sticky-block__bottom-content
 	&__bottom-content {
 		display: flex;
-		gap: 10px;
+		gap: 5px;
 	}
 	// .sticky-block__price
 	&__price {
@@ -398,7 +404,8 @@ a {
 		text-decoration: none;
 		line-height: 24px;
 		font-weight: 500;
-		background-color: #1A237E;
+		// background-color: #1A237E;
+		background-color: #761B7B;
 		color: #fff;
 		cursor: pointer;
 		width: 100%;
@@ -418,6 +425,10 @@ a {
 
 .sub-title .sticky-block__price-info, span .sticky-block__price-info {
 	display: inline-flex;
+}
+
+span .sticky-block__price-info {
+	margin-top: 3px;
 }
 
 .quantity {
